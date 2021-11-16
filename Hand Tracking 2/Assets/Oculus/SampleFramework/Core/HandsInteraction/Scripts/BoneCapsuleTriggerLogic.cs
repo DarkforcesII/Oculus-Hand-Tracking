@@ -40,7 +40,8 @@ namespace OculusSampleFramework
 
 		private void OnTriggerEnter(Collider other)
 		{
-			var triggerZone = other.GetComponent<ButtonTriggerZone>();
+			//var triggerZone = other.GetComponent<ButtonTriggerZone>();
+			var triggerZone = other.GetComponent<ColliderZone>();
 			if (triggerZone != null && (triggerZone.ParentInteractable.ValidToolTagsMask & (int)ToolTags) != 0)
 			{
 				CollidersTouchingUs.Add(triggerZone);
