@@ -400,6 +400,16 @@ public class OVRSkeleton : MonoBehaviour
 			return;
 		}
 
+		
+		/*
+		if (_capsulesGO.activeSelf)
+		{
+			_capsulesGO.SetActive(false);                  //Added by Raymond Tsang
+			_capsulesGO.SetActive(true);                  //Added by Raymond Tsang
+			capsules.CapsuleRigidbody.MovePosition(_capsulesGO.position);
+			_capsulesGO.CapsuleRigidbody.MoveRotation(_capsulesGO.rotation);
+		}*/
+
 		Update();
 
 		if (_enablePhysicsCapsules)
@@ -420,14 +430,29 @@ public class OVRSkeleton : MonoBehaviour
 
 					if (capsuleGO.activeSelf)
 					{
+						// broken oculus code
+						/*
 						capsule.CapsuleRigidbody.MovePosition(bone.position);
 						capsule.CapsuleRigidbody.MoveRotation(bone.rotation);
+						*/
+
+						// my code
+						capsule.CapsuleRigidbody.gameObject.transform.position = bone.position;
+						capsule.CapsuleRigidbody.gameObject.transform.rotation = bone.rotation;
 					}
 					else
 					{
+						// broken oculus code
+						/*
 						capsuleGO.SetActive(true);
 						capsule.CapsuleRigidbody.position = bone.position;
 						capsule.CapsuleRigidbody.rotation = bone.rotation;
+						*/
+
+						// my code
+						capsuleGO.SetActive(true);
+						capsule.CapsuleRigidbody.gameObject.transform.position = bone.position;
+						capsule.CapsuleRigidbody.gameObject.transform.rotation = bone.rotation;
 					}
 				}
 				else
