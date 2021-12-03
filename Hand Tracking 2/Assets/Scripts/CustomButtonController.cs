@@ -13,101 +13,106 @@ public class CustomButtonController : MonoBehaviour
         Assert.IsNotNull(_audioManger);
     }
 
-    public void PlayNoteC(InteractableStateArgs obj)
+    // octave 3
+    #region
+    public void PlayNoteC3(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
-            _audioManger.PlayCKey();
+            _audioManger.PlayC3Key();
         }
     }
-    public void PlayNoteCSharp(InteractableStateArgs obj)
+    public void PlayNoteCSharp3(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
-            _audioManger.PlayCSharpKey();
-        }
-    }
-
-    public void PlayNoteD(InteractableStateArgs obj)
-    {
-        if (obj.NewInteractableState == InteractableState.ActionState)
-        {
-            _audioManger.PlayDKey();
+            _audioManger.PlayCSharp3Key();
         }
     }
 
-    public void PlayNoteDSharp(InteractableStateArgs obj)
+    public void PlayNoteD3(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
-            _audioManger.PlayDSharpKey();
+            _audioManger.PlayD3Key();
         }
     }
 
-    public void PlayNoteE(InteractableStateArgs obj)
+    public void PlayNoteDSharp3(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
-            _audioManger.PlayEKey();
+            _audioManger.PlayDSharp3Key();
         }
     }
 
-    public void PlayNoteF(InteractableStateArgs obj)
+    public void PlayNoteE3(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
-            _audioManger.PlayFKey();
+            _audioManger.PlayE3Key();
         }
     }
 
-    public void PlayNoteFSharp(InteractableStateArgs obj)
+    public void PlayNoteF3(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
-            _audioManger.PlayFSharpKey();
+            _audioManger.PlayF3Key();
         }
     }
 
-    public void PlayNoteG(InteractableStateArgs obj)
+    public void PlayNoteFSharp3(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
-            _audioManger.PlayGKey();
+            _audioManger.PlayFSharp3Key();
         }
     }
 
-    public void PlayNoteGSharp(InteractableStateArgs obj)
+    public void PlayNoteG3(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
-            _audioManger.PlayGSharpKey();
+            _audioManger.PlayG3Key();
         }
     }
 
-    public void PlayNoteA(InteractableStateArgs obj)
+    public void PlayNoteGSharp3(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
-            _audioManger.PlayAKey();
+            _audioManger.PlayGSharp3Key();
         }
     }
 
-    public void PlayNoteBb(InteractableStateArgs obj)
+    public void PlayNoteA3(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
-            _audioManger.PlayBbKey();
+            _audioManger.PlayA3Key();
         }
     }
 
-    public void PlayNoteB(InteractableStateArgs obj)
+    public void PlayNoteBb3(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
-            _audioManger.PlayBKey();
+            _audioManger.PlayBb3Key();
         }
     }
 
+    public void PlayNoteB3(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            _audioManger.PlayB3Key();
+        }
+    }
+    #endregion
+
+    // octave 4
+    #region
     public void PlayNoteC4(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
@@ -115,4 +120,93 @@ public class CustomButtonController : MonoBehaviour
             _audioManger.PlayC4Key();
         }
     }
+    public void PlayNoteCSharp4(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            _audioManger.PlayCSharp4Key();
+        }
+    }
+
+    public void PlayNoteD4(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            _audioManger.PlayD4Key();
+        }
+    }
+
+    public void PlayNoteDSharp4(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            _audioManger.PlayDSharp4Key();
+        }
+    }
+
+    public void PlayNoteE4(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            _audioManger.PlayE4Key();
+        }
+    }
+
+    public void PlayNoteF4(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            _audioManger.PlayF4Key();
+        }
+    }
+
+    public void PlayNoteFSharp4(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            _audioManger.PlayFSharp4Key();
+        }
+    }
+
+    public void PlayNoteG4(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            _audioManger.PlayG4Key();
+        }
+    }
+
+    public void PlayNoteGSharp4(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            _audioManger.PlayGSharp4Key();
+        }
+    }
+
+    public void PlayNoteA4(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            _audioManger.PlayA4Key();
+        }
+    }
+
+    public void PlayNoteBb4(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            _audioManger.PlayBb4Key();
+        }
+    }
+
+    public void PlayNoteB4(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            _audioManger.PlayB4Key();
+        }
+    }
+
+    #endregion
 }
