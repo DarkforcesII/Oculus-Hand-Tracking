@@ -1,17 +1,23 @@
 using OculusSampleFramework;
 using System.Collections;
 using System.Collections.Generic;
+using UniOSC;
 using UnityEngine;
 using UnityEngine.Assertions;
 
 public class CustomButtonController : MonoBehaviour
 {
-    [SerializeField] private CustomAudioManager _audioManger = null;
+    [SerializeField] 
+    private CustomAudioManager _audioManger = null;
+
+    [SerializeField]
+    private UniOSCEventDispatcherButton dispatcher;
 
     void Awake()
     {
         Assert.IsNotNull(_audioManger);
     }
+
 
     // octave 3
     #region
@@ -20,6 +26,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayC3Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
     public void PlayNoteCSharp3(InteractableStateArgs obj)
