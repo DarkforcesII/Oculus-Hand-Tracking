@@ -34,6 +34,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayCSharp3Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -42,6 +43,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayD3Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -50,6 +52,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayDSharp3Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -58,6 +61,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayE3Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -66,6 +70,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayF3Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -74,6 +79,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayFSharp3Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -82,6 +88,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayG3Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -90,6 +97,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayGSharp3Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -98,6 +106,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayA3Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -106,6 +115,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayBb3Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -114,6 +124,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayB3Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
     #endregion
@@ -125,6 +136,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayC4Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
     public void PlayNoteCSharp4(InteractableStateArgs obj)
@@ -132,6 +144,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayCSharp4Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -140,6 +153,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayD4Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -148,6 +162,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayDSharp4Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -156,6 +171,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayE4Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -164,6 +180,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayF4Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -172,6 +189,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayFSharp4Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -180,6 +198,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayG4Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -188,6 +207,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayGSharp4Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -196,6 +216,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayA4Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -204,6 +225,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayBb4Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
@@ -212,6 +234,7 @@ public class CustomButtonController : MonoBehaviour
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             _audioManger.PlayB4Key();
+            dispatcher.SendOSCMessageDown();
         }
     }
 
