@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UniOSC;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 public class CustomButtonController : MonoBehaviour
 {
@@ -13,9 +14,24 @@ public class CustomButtonController : MonoBehaviour
     [SerializeField]
     private UniOSCEventDispatcherButton dispatcher;
 
+    [SerializeField]
+    private UniOSCConnection ipConnection;
+
+    public InputField ipReceiverText;
+
     void Awake()
     {
         Assert.IsNotNull(_audioManger);
+    }
+
+    // Update IP Address to accurately reflect phone address
+    public void ChangeIPAddress(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            // update address
+            ipConnection.oscOutIPAddress = ipReceiverText.text;
+        }
     }
 
 
