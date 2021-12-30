@@ -149,7 +149,6 @@ public class CustomAudioManager : MonoBehaviour
     public void PlayC4Key()
     {
         // play audio
-        soundSource.pitch = 2;
         soundSource.PlayOneShot(octaveFourKeys[0]);
         whiteKeyRenderers[7].material.color = Color.red;
         print("it played");
@@ -160,7 +159,6 @@ public class CustomAudioManager : MonoBehaviour
     public void PlayCSharp4Key()
     {
         // play audio
-        soundSource.pitch = 2;
         soundSource.PlayOneShot(octaveFourKeys[1]);
         blackKeyRenderers[5].material.color = Color.red;
         print("it played");
@@ -171,7 +169,6 @@ public class CustomAudioManager : MonoBehaviour
     public void PlayD4Key()
     {
         // play audio
-        soundSource.pitch = 2;
         soundSource.PlayOneShot(octaveFourKeys[2]);
         whiteKeyRenderers[8].material.color = Color.red;
         print("it played");
@@ -182,7 +179,6 @@ public class CustomAudioManager : MonoBehaviour
     public void PlayDSharp4Key()
     {
         // play audio
-        soundSource.pitch = 2;
         soundSource.PlayOneShot(octaveFourKeys[3]);
         blackKeyRenderers[6].material.color = Color.red;
         print("it played");
@@ -193,7 +189,6 @@ public class CustomAudioManager : MonoBehaviour
     public void PlayE4Key()
     {
         // play audio
-        soundSource.pitch = 2;
         soundSource.PlayOneShot(octaveFourKeys[4]);
         whiteKeyRenderers[9].material.color = Color.red;
         print("it played");
@@ -204,7 +199,6 @@ public class CustomAudioManager : MonoBehaviour
     public void PlayF4Key()
     {
         // play audio
-        soundSource.pitch = 2;
         soundSource.PlayOneShot(octaveFourKeys[5]);
         whiteKeyRenderers[10].material.color = Color.red;
         print("it played");
@@ -215,7 +209,6 @@ public class CustomAudioManager : MonoBehaviour
     public void PlayFSharp4Key()
     {
         // play audio
-        soundSource.pitch = 2;
         soundSource.PlayOneShot(octaveFourKeys[6]);
         blackKeyRenderers[7].material.color = Color.red;
         print("it played");
@@ -226,7 +219,6 @@ public class CustomAudioManager : MonoBehaviour
     public void PlayG4Key()
     {
         // play audio
-        soundSource.pitch = 2;
         soundSource.PlayOneShot(octaveFourKeys[7]);
         whiteKeyRenderers[11].material.color = Color.red;
         print("it played");
@@ -237,7 +229,6 @@ public class CustomAudioManager : MonoBehaviour
     public void PlayGSharp4Key()
     {
         // play audio
-        soundSource.pitch = 2;
         soundSource.PlayOneShot(octaveFourKeys[8]);
         blackKeyRenderers[8].material.color = Color.red;
         print("it played");
@@ -248,7 +239,6 @@ public class CustomAudioManager : MonoBehaviour
     public void PlayA4Key()
     {
         // play audio
-        soundSource.pitch = 2;
         soundSource.PlayOneShot(octaveFourKeys[9]);
         whiteKeyRenderers[12].material.color = Color.red;
         print("it played");
@@ -259,7 +249,6 @@ public class CustomAudioManager : MonoBehaviour
     public void PlayBb4Key()
     {
         // play audio
-        soundSource.pitch = 2;
         soundSource.PlayOneShot(octaveFourKeys[10]);
         blackKeyRenderers[9].material.color = Color.red;
         print("it played");
@@ -270,7 +259,6 @@ public class CustomAudioManager : MonoBehaviour
     public void PlayB4Key()
     {
         // play audio
-        soundSource.pitch = 2;
         soundSource.PlayOneShot(octaveFourKeys[11]);
         whiteKeyRenderers[13].material.color = Color.red;
         print("it played");
@@ -280,11 +268,12 @@ public class CustomAudioManager : MonoBehaviour
 
     #endregion
 
+    // resets color
+    #region
     public void ResetWhiteKeyColor()
     {
         for (int i = 0; i < whiteKeyRenderers.Length; ++i)
         {
-            soundSource.pitch = 1;
             whiteKeyRenderers[i].material.color = Color.white;
         }
     }
@@ -293,8 +282,8 @@ public class CustomAudioManager : MonoBehaviour
     {
         for (int i = 0; i < blackKeyRenderers.Length; ++i)
         {
-            soundSource.pitch = 1;
             blackKeyRenderers[i].material.color = Color.black;
         }
     }
+    #endregion
 }
