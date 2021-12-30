@@ -17,23 +17,240 @@ public class CustomButtonController : MonoBehaviour
     [SerializeField]
     private UniOSCConnection ipConnection;
 
-    public InputField ipReceiverText;
+    public Text ipAddress;
+
+    private bool limitSelection = false;
 
     void Awake()
     {
         Assert.IsNotNull(_audioManger);
+
+        // makes sure that ip address is reset each time app is started
+        /*
+        print(ipConnection.oscOutIPAddress);
+        ipConnection.oscOutIPAddress = ipAddress.text;
+        print(ipConnection.oscOutIPAddress);
+        */
     }
 
-    // Update IP Address to accurately reflect phone address
-    public void ChangeIPAddress(InteractableStateArgs obj)
+    // Numpad object methods
+    #region
+
+    // will make sure to concatenate string as more are selected
+    private void ChangeText(string newString)
+    {
+        if (ipAddress.text == "Enter IP Address")
+        {
+            ipAddress.text = newString;
+            //print(ipAddressList);
+        }
+        else
+        {
+            ipAddress.text += newString;
+        }
+
+        print(ipAddress.text);
+    }
+
+    // Update IP string with digit 7
+    public void Add7String(InteractableStateArgs obj)
+    {
+        if (limitSelection == false)
+        {
+            limitSelection = true;
+
+            if (obj.NewInteractableState == InteractableState.ActionState)
+            {
+                //ipAddressList.AddAfter()
+                // update address
+                ChangeText("7");
+            }
+            // play coroutine to reset bool
+            StartCoroutine(ResetBool());
+        }
+    }
+    public void Add8String(InteractableStateArgs obj)
+    {
+        if (limitSelection == false)
+        {
+            limitSelection = true;
+
+            if (obj.NewInteractableState == InteractableState.ActionState)
+            {
+                // update address
+                ChangeText("8");
+            }
+            // play coroutine to reset bool
+            StartCoroutine(ResetBool());
+        }
+    }
+    public void Add9String(InteractableStateArgs obj)
+    {
+        if (limitSelection == false)
+        {
+            limitSelection = true;
+
+            if (obj.NewInteractableState == InteractableState.ActionState)
+            {
+                // update address
+                ChangeText("9");
+            }
+            // play coroutine to reset bool
+            StartCoroutine(ResetBool());
+        }
+    }
+    public void Add4String(InteractableStateArgs obj)
+    {
+        if (limitSelection == false)
+        {
+            limitSelection = true;
+
+            if (obj.NewInteractableState == InteractableState.ActionState)
+            {
+                // update address
+                ChangeText("4");
+            }
+            // play coroutine to reset bool
+            StartCoroutine(ResetBool());
+        }
+    }
+    public void Add5String(InteractableStateArgs obj)
+    {
+        if (limitSelection == false)
+        {
+            limitSelection = true;
+
+            if (obj.NewInteractableState == InteractableState.ActionState)
+            {
+                // update address
+                ChangeText("5");
+            }
+            // play coroutine to reset bool
+            StartCoroutine(ResetBool());
+        }
+    }
+    public void Add6String(InteractableStateArgs obj)
+    {
+        if (limitSelection == false)
+        {
+            limitSelection = true;
+
+            if (obj.NewInteractableState == InteractableState.ActionState)
+            {
+                // update address
+                ChangeText("6");
+            }
+            // play coroutine to reset bool
+            StartCoroutine(ResetBool());
+        }
+    }
+    public void Add1String(InteractableStateArgs obj)
+    {
+        if (limitSelection == false)
+        {
+            limitSelection = true;
+
+            if (obj.NewInteractableState == InteractableState.ActionState)
+            {
+                // update address
+                ChangeText("1");
+            }
+            // play coroutine to reset bool
+            StartCoroutine(ResetBool());
+        }
+    }
+    public void Add2String(InteractableStateArgs obj)
+    {
+        if (limitSelection == false)
+        {
+            limitSelection = true;
+
+            if (obj.NewInteractableState == InteractableState.ActionState)
+            {
+                // update address
+                ChangeText("2");
+            }
+            // play coroutine to reset bool
+            StartCoroutine(ResetBool());
+        }
+    }
+    public void Add3String(InteractableStateArgs obj)
+    {
+        if (limitSelection == false)
+        {
+            limitSelection = true;
+            
+            if (obj.NewInteractableState == InteractableState.ActionState)
+            {
+                // update address
+                ChangeText("3");
+            }
+            // play coroutine to reset bool
+            StartCoroutine(ResetBool());
+        }
+    }
+    public void AddPeriodString(InteractableStateArgs obj)
+    {
+        if (limitSelection == false)
+        {
+            limitSelection = true;
+
+            if (obj.NewInteractableState == InteractableState.ActionState)
+            {
+                // update address
+                ChangeText(".");
+            }
+            // play coroutine to reset bool
+            StartCoroutine(ResetBool());
+        }
+    }
+    public void Add0String(InteractableStateArgs obj)
+    {
+        if (limitSelection == false)
+        {
+            limitSelection = true;
+
+            if (obj.NewInteractableState == InteractableState.ActionState)
+            {
+                // update address
+                ChangeText("0");
+            }
+            // play coroutine to reset bool
+            StartCoroutine(ResetBool());
+        }
+    }
+
+    public void ClearText(InteractableStateArgs obj)
     {
         if (obj.NewInteractableState == InteractableState.ActionState)
         {
             // update address
-            ipConnection.oscOutIPAddress = ipReceiverText.text;
+            ipAddress.text = "";
+            ipConnection.oscOutIPAddress = ipAddress.text;
         }
     }
 
+    // Update IP Address to accurately reflect phone address
+    public void EnterIPAddress(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            // update address
+            ipConnection.oscOutIPAddress = ipAddress.text;
+        }
+    }
+
+    #endregion
+
+
+    // coroutine to reset bool and limit selection
+    #region
+    private IEnumerator ResetBool()
+    {
+        yield return new WaitForSeconds(1);
+        limitSelection = false;
+    }
+    #endregion
 
     // octave 3
     #region
