@@ -3647,8 +3647,8 @@ MonoBehaviour:
   InteractableStateChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
+      - m_Target: {fileID: 1400200414}
+        m_TargetAssemblyTypeName: CustomUIController, Assembly-CSharp
         m_MethodName: ClearText
         m_Mode: 0
         m_Arguments:
@@ -6524,9 +6524,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioManger: {fileID: 1400200409}
   dispatcher: {fileID: 1400200413}
-  ipConnection: {fileID: 930354272}
-  ipAddress: {fileID: 1570448483}
-  textField: {fileID: 1245611640}
 --- !u!82 &1400200412
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6663,6 +6660,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piano: {fileID: 976023178}
   scale: 1.1
+  ipAddress: {fileID: 1570448483}
+  ipConnection: {fileID: 930354272}
+  dispatcher: {fileID: 1400200413}
+  textField: {fileID: 1245611640}
 --- !u!1 &1427339654
 GameObject:
   m_ObjectHideFlags: 0
@@ -10450,10 +10451,14 @@ PrefabInstance:
     - target: {fileID: 925088745411059479, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1400200411}
+      objectReference: {fileID: 1400200414}
     - target: {fileID: 925088745411059479, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterIPAddress
+      objectReference: {fileID: 0}
+    - target: {fileID: 925088745411059479, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomUIController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 925088745515718624, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
@@ -10522,11 +10527,15 @@ PrefabInstance:
     - target: {fileID: 925088745610131399, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1400200411}
+      objectReference: {fileID: 1400200414}
     - target: {fileID: 925088745610131399, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Add3String
       objectReference: {fileID: 0}
+    - target: {fileID: 925088745610131399, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomUIController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 925088746003663721, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -10534,11 +10543,15 @@ PrefabInstance:
     - target: {fileID: 925088746003663721, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1400200411}
+      objectReference: {fileID: 1400200414}
     - target: {fileID: 925088746003663721, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Add0String
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746003663721, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomUIController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 925088746050425560, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -10546,11 +10559,15 @@ PrefabInstance:
     - target: {fileID: 925088746050425560, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1400200411}
+      objectReference: {fileID: 1400200414}
     - target: {fileID: 925088746050425560, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Add5String
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746050425560, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomUIController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 925088746104422569, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -10558,11 +10575,15 @@ PrefabInstance:
     - target: {fileID: 925088746104422569, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1400200411}
+      objectReference: {fileID: 1400200414}
     - target: {fileID: 925088746104422569, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddPeriodString
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746104422569, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomUIController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 925088746200666458, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -10570,11 +10591,15 @@ PrefabInstance:
     - target: {fileID: 925088746200666458, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1400200411}
+      objectReference: {fileID: 1400200414}
     - target: {fileID: 925088746200666458, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Add9String
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746200666458, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomUIController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 925088746237269742, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -10582,7 +10607,15 @@ PrefabInstance:
     - target: {fileID: 925088746237269742, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1400200411}
+      objectReference: {fileID: 1400200414}
+    - target: {fileID: 925088746237269742, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Add7String
+      objectReference: {fileID: 0}
+    - target: {fileID: 925088746237269742, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomUIController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 925088746364838051, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -10590,11 +10623,15 @@ PrefabInstance:
     - target: {fileID: 925088746364838051, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1400200411}
+      objectReference: {fileID: 1400200414}
     - target: {fileID: 925088746364838051, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Add8String
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746364838051, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomUIController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 925088746402361321, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -10602,11 +10639,15 @@ PrefabInstance:
     - target: {fileID: 925088746402361321, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1400200411}
+      objectReference: {fileID: 1400200414}
     - target: {fileID: 925088746402361321, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Add2String
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746402361321, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomUIController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 925088746538159843, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -10614,11 +10655,15 @@ PrefabInstance:
     - target: {fileID: 925088746538159843, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1400200411}
+      objectReference: {fileID: 1400200414}
     - target: {fileID: 925088746538159843, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Add4String
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746538159843, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomUIController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 925088746586174720, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -10626,10 +10671,14 @@ PrefabInstance:
     - target: {fileID: 925088746586174720, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1400200411}
+      objectReference: {fileID: 1400200414}
     - target: {fileID: 925088746586174720, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Add6String
+      objectReference: {fileID: 0}
+    - target: {fileID: 925088746586174720, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomUIController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 925088747194982247, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
@@ -10638,10 +10687,14 @@ PrefabInstance:
     - target: {fileID: 925088747194982247, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1400200411}
+      objectReference: {fileID: 1400200414}
     - target: {fileID: 925088747194982247, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Add1String
+      objectReference: {fileID: 0}
+    - target: {fileID: 925088747194982247, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomUIController, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
