@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using OculusSampleFramework;
 using UniOSC;
+using UnityEngine.Assertions;
 
 public class CustomUIController : MonoBehaviour
 {
@@ -14,6 +15,19 @@ public class CustomUIController : MonoBehaviour
 
     [SerializeField]
     private float scale;
+
+    // used to disable ui elements
+    public GameObject[] uiObjects;
+    private bool isActive = true;
+    private bool hasActivated = false;
+
+    [SerializeField]
+    private CustomAudioManager _audioManger = null;
+
+    private void Awake()
+    {
+        Assert.IsNotNull(_audioManger);
+    }
 
     // references to text and UniOSC classes
     #region
@@ -54,6 +68,23 @@ public class CustomUIController : MonoBehaviour
         {
             dispatcher.SendOSCMessageDown();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && isActive == true)
+        {
+            foreach (GameObject objs in uiObjects)
+            {
+                isActive = false;
+                objs.SetActive(false);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && isActive == false)
+        {
+            foreach (GameObject objs in uiObjects)
+            {
+                isActive = true;
+                objs.SetActive(true);
+            }
+        }
     }
     // Numpad object methods
     #region
@@ -88,6 +119,7 @@ public class CustomUIController : MonoBehaviour
             if (obj.NewInteractableState == InteractableState.ActionState)
             {
                 ChangeText("7");
+                _audioManger.PlayUIClick();
             }
             // play coroutine to reset bool
             StartCoroutine(ResetBool());
@@ -103,6 +135,7 @@ public class CustomUIController : MonoBehaviour
             {
                 // update address
                 ChangeText("8");
+                _audioManger.PlayUIClick();
             }
             // play coroutine to reset bool
             StartCoroutine(ResetBool());
@@ -118,6 +151,7 @@ public class CustomUIController : MonoBehaviour
             {
                 // update address
                 ChangeText("9");
+                _audioManger.PlayUIClick();
             }
             // play coroutine to reset bool
             StartCoroutine(ResetBool());
@@ -133,6 +167,7 @@ public class CustomUIController : MonoBehaviour
             {
                 // update address
                 ChangeText("4");
+                _audioManger.PlayUIClick();
             }
             // play coroutine to reset bool
             StartCoroutine(ResetBool());
@@ -148,6 +183,7 @@ public class CustomUIController : MonoBehaviour
             {
                 // update address
                 ChangeText("5");
+                _audioManger.PlayUIClick();
             }
             // play coroutine to reset bool
             StartCoroutine(ResetBool());
@@ -163,6 +199,7 @@ public class CustomUIController : MonoBehaviour
             {
                 // update address
                 ChangeText("6");
+                _audioManger.PlayUIClick();
             }
             // play coroutine to reset bool
             StartCoroutine(ResetBool());
@@ -178,6 +215,7 @@ public class CustomUIController : MonoBehaviour
             {
                 // update address
                 ChangeText("1");
+                _audioManger.PlayUIClick();
             }
             // play coroutine to reset bool
             StartCoroutine(ResetBool());
@@ -193,6 +231,7 @@ public class CustomUIController : MonoBehaviour
             {
                 // update address
                 ChangeText("2");
+                _audioManger.PlayUIClick();
             }
             // play coroutine to reset bool
             StartCoroutine(ResetBool());
@@ -208,6 +247,7 @@ public class CustomUIController : MonoBehaviour
             {
                 // update address
                 ChangeText("3");
+                _audioManger.PlayUIClick();
             }
             // play coroutine to reset bool
             StartCoroutine(ResetBool());
@@ -223,6 +263,7 @@ public class CustomUIController : MonoBehaviour
             {
                 // update address
                 ChangeText(".");
+                _audioManger.PlayUIClick();
             }
             // play coroutine to reset bool
             StartCoroutine(ResetBool());
@@ -238,6 +279,7 @@ public class CustomUIController : MonoBehaviour
             {
                 // update address
                 ChangeText("0");
+                _audioManger.PlayUIClick();
             }
             // play coroutine to reset bool
             StartCoroutine(ResetBool());
@@ -250,6 +292,7 @@ public class CustomUIController : MonoBehaviour
         {
             // update address
             RemoveLastDigit();
+            _audioManger.PlayUIClick();
         }
     }
 
@@ -261,6 +304,7 @@ public class CustomUIController : MonoBehaviour
             // update address
             ipConnection.oscOutIPAddress = ipAddress.text;
             ipConnection.ConnectOSCOut();
+            _audioManger.PlayUIClick();
         }
     }
 
@@ -272,11 +316,10 @@ public class CustomUIController : MonoBehaviour
     {
         if (limitSelection == false)
         {
-            limitSelection = true;
-
             if (obj.NewInteractableState == InteractableState.ActionState)
             {
                 piano.localScale *= scale;
+                _audioManger.PlayUIClick();
 
                 // play coroutine to reset bool
                 StartCoroutine(ResetBool());
@@ -288,14 +331,44 @@ public class CustomUIController : MonoBehaviour
     {
         if (limitSelection == false)
         {
-            limitSelection = true;
-
             if (obj.NewInteractableState == InteractableState.ActionState)
             {
                 piano.localScale /= scale;
+                _audioManger.PlayUIClick();
 
                 // play coroutine to reset bool
                 StartCoroutine(ResetBool());
+            }
+        }
+    }
+    #endregion
+
+    // for enabling/diabling ui
+    #region
+    public void EnableDisableUI(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            if (isActive == true)
+            {
+                foreach (GameObject objs in uiObjects)
+                {
+                    isActive = false;
+                    objs.SetActive(false);
+                    _audioManger.PlayUIClick();
+                }
+            }
+            else if (obj.NewInteractableState == InteractableState.ActionState)
+            {
+                if (isActive == false)
+                {
+                    foreach (GameObject objs in uiObjects)
+                    {
+                        isActive = true;
+                        objs.SetActive(true);
+                        _audioManger.PlayUIClick();
+                    }
+                }
             }
         }
     }
