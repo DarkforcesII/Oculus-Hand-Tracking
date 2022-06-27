@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CustomAudioManager : MonoBehaviour
 {
@@ -16,10 +17,16 @@ public class CustomAudioManager : MonoBehaviour
     public Renderer[] blackKeyRenderers;
     public float resetColorTimer = 0.5f;
 
+
     // Start is called before the first frame update
     void Start()
     {
-       
+        
+    }
+
+    public void PlayNote(AudioClip noteClip)
+    {
+        noteClip = pianoSource.clip;
     }
 
     // UI click

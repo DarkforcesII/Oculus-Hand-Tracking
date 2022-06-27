@@ -136,9 +136,10 @@ GameObject:
   - component: {fileID: 7785680}
   - component: {fileID: 7785679}
   - component: {fileID: 7785678}
+  - component: {fileID: 7785682}
   m_Layer: 0
   m_Name: BKeyButtonHousing (6)
-  m_TagString: Untagged
+  m_TagString: 23
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,9 +177,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteB4
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7785678}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -258,6 +271,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7785676}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7785682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &15835776
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,10 +540,12 @@ GameObject:
   - component: {fileID: 118939949}
   - component: {fileID: 118939948}
   - component: {fileID: 118939947}
+  - component: {fileID: 118939952}
   - component: {fileID: 118939951}
+  - component: {fileID: 118939953}
   m_Layer: 0
   m_Name: CKeyButtonHousing
-  m_TagString: Untagged
+  m_TagString: 0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -594,9 +645,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteC3
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118939951}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -610,6 +673,54 @@ MonoBehaviour:
   _actionZone: {fileID: 630567499}
   _contactTests: 
   _buttonPlaneCenter: {fileID: 627890641}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
+--- !u!114 &118939952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118939946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc240f631eca2814f90a54acbda3358c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &118939953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118939946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
   _makeSureToolIsOnPositiveSide: 1
   _localButtonDirection: {x: 0, y: -1, z: 0}
   _allValidToolsTags: ffffffff
@@ -960,7 +1071,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d731b1603eb79a548a74452fc57efad9, type: 2}
+  - {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1573,9 +1684,10 @@ GameObject:
   - component: {fileID: 319369133}
   - component: {fileID: 319369132}
   - component: {fileID: 319369131}
+  - component: {fileID: 319369136}
   m_Layer: 0
   m_Name: FKeyButtonHousing (3)
-  m_TagString: Untagged
+  m_TagString: 5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1596,9 +1708,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteF3
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 319369131}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1695,6 +1819,42 @@ Transform:
   m_Father: {fileID: 15835777}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &319369136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319369130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!4 &329784322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 925088745609278358, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
@@ -1771,9 +1931,10 @@ GameObject:
   - component: {fileID: 381371331}
   - component: {fileID: 381371330}
   - component: {fileID: 381371329}
+  - component: {fileID: 381371333}
   m_Layer: 0
   m_Name: AKeyButtonHousing (5)
-  m_TagString: Untagged
+  m_TagString: 21
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1811,9 +1972,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteA4
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7785678}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1893,6 +2066,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381371327}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &381371333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381371327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &385057283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,9 +2115,10 @@ GameObject:
   - component: {fileID: 385057287}
   - component: {fileID: 385057286}
   - component: {fileID: 385057285}
+  - component: {fileID: 385057289}
   m_Layer: 0
   m_Name: DKeyButtonHousing (1)
-  m_TagString: Untagged
+  m_TagString: 14
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1946,9 +2156,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteD4
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7785678}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2028,6 +2250,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385057283}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &385057289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385057283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &386308212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2389,9 +2647,10 @@ GameObject:
   - component: {fileID: 567260334}
   - component: {fileID: 567260333}
   - component: {fileID: 567260332}
+  - component: {fileID: 567260336}
   m_Layer: 0
   m_Name: F#KeyButtonHousing (3)
-  m_TagString: Untagged
+  m_TagString: 18
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2429,9 +2688,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteFSharp4
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7785678}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2511,6 +2782,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567260330}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &567260336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567260330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &576502887
 GameObject:
   m_ObjectHideFlags: 0
@@ -2524,9 +2831,10 @@ GameObject:
   - component: {fileID: 576502890}
   - component: {fileID: 576502889}
   - component: {fileID: 576502888}
+  - component: {fileID: 576502893}
   m_Layer: 0
   m_Name: DKeyButtonHousing (1)
-  m_TagString: Untagged
+  m_TagString: 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2547,9 +2855,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteD3
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 576502888}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2646,6 +2966,42 @@ Transform:
   m_Father: {fileID: 15835777}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &576502893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576502887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &578642908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3763,7 +4119,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d731b1603eb79a548a74452fc57efad9, type: 2}
+  - {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4591,7 +4947,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d731b1603eb79a548a74452fc57efad9, type: 2}
+  - {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4717,9 +5073,10 @@ GameObject:
   - component: {fileID: 946694994}
   - component: {fileID: 946694993}
   - component: {fileID: 946694992}
+  - component: {fileID: 946694997}
   m_Layer: 0
   m_Name: C4KeyButtonHousing (7)
-  m_TagString: Untagged
+  m_TagString: 12
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4740,9 +5097,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteC4
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7785678}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4839,6 +5208,42 @@ Transform:
   m_Father: {fileID: 862535782}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &946694997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946694991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &962300966
 GameObject:
   m_ObjectHideFlags: 0
@@ -5000,9 +5405,10 @@ GameObject:
   - component: {fileID: 1006115867}
   - component: {fileID: 1006115866}
   - component: {fileID: 1006115865}
+  - component: {fileID: 1006115869}
   m_Layer: 0
   m_Name: EKeyButtonHousing (2)
-  m_TagString: Untagged
+  m_TagString: 16
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5040,9 +5446,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteE4
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7785678}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5122,6 +5540,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006115863}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1006115869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006115863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1029091707
 GameObject:
   m_ObjectHideFlags: 0
@@ -5135,9 +5589,10 @@ GameObject:
   - component: {fileID: 1029091711}
   - component: {fileID: 1029091710}
   - component: {fileID: 1029091709}
+  - component: {fileID: 1029091713}
   m_Layer: 0
   m_Name: G#KeyButtonHousing (4)
-  m_TagString: Untagged
+  m_TagString: 20
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5175,9 +5630,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteGSharp4
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7785678}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5257,6 +5724,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029091707}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1029091713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029091707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1061617048
 GameObject:
   m_ObjectHideFlags: 0
@@ -5386,9 +5889,10 @@ GameObject:
   - component: {fileID: 1070602758}
   - component: {fileID: 1070602757}
   - component: {fileID: 1070602756}
+  - component: {fileID: 1070602761}
   m_Layer: 0
   m_Name: AKeyButtonHousing (5)
-  m_TagString: Untagged
+  m_TagString: 9
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5409,9 +5913,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteA3
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 319369131}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5508,6 +6024,42 @@ Transform:
   m_Father: {fileID: 15835777}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1070602761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070602755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1126448727
 GameObject:
   m_ObjectHideFlags: 0
@@ -5695,9 +6247,10 @@ GameObject:
   - component: {fileID: 1166474596}
   - component: {fileID: 1166474595}
   - component: {fileID: 1166474594}
+  - component: {fileID: 1166474599}
   m_Layer: 0
   m_Name: BKeyButtonHousing (6)
-  m_TagString: Untagged
+  m_TagString: 11
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5718,9 +6271,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteB3
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 319369131}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5817,6 +6382,42 @@ Transform:
   m_Father: {fileID: 15835777}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1166474599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166474593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1212666256
 GameObject:
   m_ObjectHideFlags: 0
@@ -6322,7 +6923,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d731b1603eb79a548a74452fc57efad9, type: 2}
+  - {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6423,9 +7024,10 @@ GameObject:
   - component: {fileID: 1369430231}
   - component: {fileID: 1369430230}
   - component: {fileID: 1369430229}
+  - component: {fileID: 1369430234}
   m_Layer: 0
   m_Name: GKeyButtonHousing (4)
-  m_TagString: Untagged
+  m_TagString: 7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6446,9 +7048,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteG3
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 319369131}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6545,6 +7159,42 @@ Transform:
   m_Father: {fileID: 15835777}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1369430234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369430228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1374125609
 GameObject:
   m_ObjectHideFlags: 0
@@ -6867,6 +7517,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioManger: {fileID: 1400200409}
   dispatcher: {fileID: 1400200413}
+  pianoSource: {fileID: 1400200412}
+  noteClips:
+  - {fileID: 8300000, guid: 7222b9a5fbb9e8e4ca749e4ed3a8e409, type: 3}
+  - {fileID: 8300000, guid: 1812c6f125d2fe44dabc3016c5ae607a, type: 3}
+  - {fileID: 8300000, guid: ff4173785d7f31e41a9041a5e86e8ab9, type: 3}
+  - {fileID: 8300000, guid: ca3f4359329e3a1439fea32ce8cb3f4e, type: 3}
+  - {fileID: 8300000, guid: 5896c57ef59885746b3f913ec9f827ea, type: 3}
+  - {fileID: 8300000, guid: 6cce3b1c1455674428cc22b5069fd7a8, type: 3}
+  - {fileID: 8300000, guid: 9863a002fb96d4b4db00b1556308298c, type: 3}
+  - {fileID: 8300000, guid: ac789ee15d746524dbdf799acbd5fe69, type: 3}
+  - {fileID: 8300000, guid: cf39d606314f3e34b962045f463589fc, type: 3}
+  - {fileID: 8300000, guid: 8f1f7afdc67f93a4bb873104d01453e3, type: 3}
+  - {fileID: 8300000, guid: a36b71abaa1c7a24a8a0d2ac5cad66f5, type: 3}
+  - {fileID: 8300000, guid: 138d8f57f267e9f48959838f5082cbbf, type: 3}
+  - {fileID: 8300000, guid: 326f431eb25f42b4a9d4a30cd4169fb6, type: 3}
+  - {fileID: 8300000, guid: 40b3591fdd7295040b7903c647f753c0, type: 3}
+  - {fileID: 8300000, guid: 7cab6217be00c7b4f867016efda1cb57, type: 3}
+  - {fileID: 8300000, guid: fdd4cf8ce54ff334a991f0edef2c35f1, type: 3}
+  - {fileID: 8300000, guid: 7b4ad5496f4dc0346aac10b95681847f, type: 3}
+  - {fileID: 8300000, guid: d9435457fb02c22449de31902a77c45b, type: 3}
+  - {fileID: 8300000, guid: 411358f658fde1247986d4949eb7c583, type: 3}
+  - {fileID: 8300000, guid: b99b65baf8f05d9418efb7f9eb6a387a, type: 3}
+  - {fileID: 8300000, guid: dac1a743862963641b82c3c144488791, type: 3}
+  - {fileID: 8300000, guid: 614249e30c1dcc445a6e8b05a56110fd, type: 3}
+  - {fileID: 8300000, guid: 3db38f442870d5d42985dfe20cb77ac5, type: 3}
+  - {fileID: 8300000, guid: ecdfc35f724696849bc97f46a8fc7027, type: 3}
+  keysRenderer:
+  - {fileID: 118939948}
+  - {fileID: 1619368449}
+  - {fileID: 576502890}
+  - {fileID: 1467948729}
+  - {fileID: 1464539312}
+  - {fileID: 319369133}
+  - {fileID: 1754703434}
+  - {fileID: 1369430231}
+  - {fileID: 2023306897}
+  - {fileID: 1070602758}
+  - {fileID: 1448858880}
+  - {fileID: 1166474596}
+  - {fileID: 946694994}
+  - {fileID: 1903379004}
+  - {fileID: 385057287}
+  - {fileID: 1791303603}
+  - {fileID: 1006115867}
+  - {fileID: 1482779816}
+  - {fileID: 567260334}
+  - {fileID: 2119801592}
+  - {fileID: 1029091711}
+  - {fileID: 381371331}
+  - {fileID: 1635232782}
+  - {fileID: 7785680}
 --- !u!82 &1400200412
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7301,9 +8002,10 @@ GameObject:
   - component: {fileID: 1448858880}
   - component: {fileID: 1448858879}
   - component: {fileID: 1448858878}
+  - component: {fileID: 1448858883}
   m_Layer: 0
   m_Name: BbKeyButtonHousing (5)
-  m_TagString: Untagged
+  m_TagString: 10
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7324,9 +8026,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteBb3
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 319369131}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7423,6 +8137,42 @@ Transform:
   m_Father: {fileID: 15835777}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1448858883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448858877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1464539309
 GameObject:
   m_ObjectHideFlags: 0
@@ -7436,9 +8186,10 @@ GameObject:
   - component: {fileID: 1464539312}
   - component: {fileID: 1464539311}
   - component: {fileID: 1464539310}
+  - component: {fileID: 1464539315}
   m_Layer: 0
   m_Name: EKeyButtonHousing (2)
-  m_TagString: Untagged
+  m_TagString: 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7459,9 +8210,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteE3
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1464539310}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7558,6 +8321,42 @@ Transform:
   m_Father: {fileID: 15835777}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1464539315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464539309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1467948726
 GameObject:
   m_ObjectHideFlags: 0
@@ -7571,9 +8370,10 @@ GameObject:
   - component: {fileID: 1467948729}
   - component: {fileID: 1467948728}
   - component: {fileID: 1467948727}
+  - component: {fileID: 1467948732}
   m_Layer: 0
   m_Name: D#KeyButtonHousing (2)
-  m_TagString: Untagged
+  m_TagString: 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7594,9 +8394,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteDSharp3
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1467948727}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7693,6 +8505,42 @@ Transform:
   m_Father: {fileID: 15835777}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1467948732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467948726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1482779812
 GameObject:
   m_ObjectHideFlags: 0
@@ -7706,9 +8554,10 @@ GameObject:
   - component: {fileID: 1482779816}
   - component: {fileID: 1482779815}
   - component: {fileID: 1482779814}
+  - component: {fileID: 1482779818}
   m_Layer: 0
   m_Name: FKeyButtonHousing (3)
-  m_TagString: Untagged
+  m_TagString: 17
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7746,9 +8595,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteF4
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7785678}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7828,6 +8689,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482779812}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1482779818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482779812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1486598100
 GameObject:
   m_ObjectHideFlags: 0
@@ -8388,9 +9285,10 @@ GameObject:
   - component: {fileID: 1619368449}
   - component: {fileID: 1619368448}
   - component: {fileID: 1619368447}
+  - component: {fileID: 1619368452}
   m_Layer: 0
   m_Name: C#KeyButtonHousing (1)
-  m_TagString: Untagged
+  m_TagString: 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8411,9 +9309,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteCSharp3
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1619368447}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8510,6 +9420,42 @@ Transform:
   m_Father: {fileID: 15835777}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1619368452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619368446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1624473110
 GameObject:
   m_ObjectHideFlags: 0
@@ -8639,9 +9585,10 @@ GameObject:
   - component: {fileID: 1635232782}
   - component: {fileID: 1635232781}
   - component: {fileID: 1635232780}
+  - component: {fileID: 1635232784}
   m_Layer: 0
   m_Name: BbKeyButtonHousing (5)
-  m_TagString: Untagged
+  m_TagString: 22
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8679,9 +9626,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteBb4
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7785678}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8761,6 +9720,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635232778}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1635232784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635232778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1650975929
 GameObject:
   m_ObjectHideFlags: 0
@@ -9064,9 +10059,10 @@ GameObject:
   - component: {fileID: 1754703434}
   - component: {fileID: 1754703433}
   - component: {fileID: 1754703432}
+  - component: {fileID: 1754703437}
   m_Layer: 0
   m_Name: F#KeyButtonHousing (3)
-  m_TagString: Untagged
+  m_TagString: 6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9087,9 +10083,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteFSharp3
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 319369131}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9186,6 +10194,42 @@ Transform:
   m_Father: {fileID: 15835777}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1754703437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754703431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1764053678
 GameObject:
   m_ObjectHideFlags: 0
@@ -9257,9 +10301,10 @@ GameObject:
   - component: {fileID: 1791303603}
   - component: {fileID: 1791303602}
   - component: {fileID: 1791303601}
+  - component: {fileID: 1791303605}
   m_Layer: 0
   m_Name: D#KeyButtonHousing (2)
-  m_TagString: Untagged
+  m_TagString: 15
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9297,9 +10342,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteDSharp4
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7785678}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9379,6 +10436,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791303599}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1791303605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791303599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1805827967
 GameObject:
   m_ObjectHideFlags: 0
@@ -9615,9 +10708,10 @@ GameObject:
   - component: {fileID: 1903379004}
   - component: {fileID: 1903379003}
   - component: {fileID: 1903379002}
+  - component: {fileID: 1903379006}
   m_Layer: 0
   m_Name: C#KeyButtonHousing (1)
-  m_TagString: Untagged
+  m_TagString: 13
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9655,9 +10749,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteCSharp4
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7785678}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9737,6 +10843,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903379000}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1903379006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903379000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &1905733707
 GameObject:
   m_ObjectHideFlags: 0
@@ -10175,9 +11317,10 @@ GameObject:
   - component: {fileID: 2023306897}
   - component: {fileID: 2023306896}
   - component: {fileID: 2023306895}
+  - component: {fileID: 2023306900}
   m_Layer: 0
   m_Name: G#KeyButtonHousing (4)
-  m_TagString: Untagged
+  m_TagString: 8
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10198,9 +11341,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteGSharp3
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 319369131}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10297,6 +11452,42 @@ Transform:
   m_Father: {fileID: 15835777}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2023306900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023306894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &2023447335
 GameObject:
   m_ObjectHideFlags: 0
@@ -10758,9 +11949,10 @@ GameObject:
   - component: {fileID: 2119801592}
   - component: {fileID: 2119801591}
   - component: {fileID: 2119801590}
+  - component: {fileID: 2119801594}
   m_Layer: 0
   m_Name: GKeyButtonHousing (4)
-  m_TagString: Untagged
+  m_TagString: 19
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10798,9 +11990,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1400200411}
-        m_TargetAssemblyTypeName: CustomButtonController, Assembly-CSharp
-        m_MethodName: PlayNoteG4
+        m_TargetAssemblyTypeName: CustomPianoController, Assembly-CSharp
+        m_MethodName: PlayNote
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7785678}
+        m_TargetAssemblyTypeName: OculusSampleFramework.ButtonController, Assembly-CSharp
+        m_MethodName: SendPianoKeyDataToManager
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10880,6 +12084,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119801588}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2119801594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119801588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c51124d62e01548aaeecff333a9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractableStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _proximityZone: {fileID: 0}
+  _contactZone: {fileID: 0}
+  _actionZone: {fileID: 0}
+  _contactTests: 
+  _buttonPlaneCenter: {fileID: 0}
+  _makeSureToolIsOnPositiveSide: 1
+  _localButtonDirection: {x: 0, y: -1, z: 0}
+  _allValidToolsTags: ffffffff
+  _allowMultipleNearFieldInteraction: 0
 --- !u!1 &2132381815
 GameObject:
   m_ObjectHideFlags: 0
@@ -10945,6 +12185,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 925088745411059473, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
     - target: {fileID: 925088745411059479, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -11021,6 +12265,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 925088745610131393, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
     - target: {fileID: 925088745610131399, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -11053,6 +12301,10 @@ PrefabInstance:
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CustomUIController, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746003663723, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
     - target: {fileID: 925088746050425560, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -11069,6 +12321,10 @@ PrefabInstance:
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CustomUIController, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746050425562, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
     - target: {fileID: 925088746104422569, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -11085,6 +12341,14 @@ PrefabInstance:
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CustomUIController, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746104422571, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
+    - target: {fileID: 925088746200666436, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
     - target: {fileID: 925088746200666458, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -11101,6 +12365,10 @@ PrefabInstance:
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CustomUIController, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746237269736, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
     - target: {fileID: 925088746237269742, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -11133,6 +12401,10 @@ PrefabInstance:
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CustomUIController, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746364838061, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
     - target: {fileID: 925088746402361321, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -11149,6 +12421,10 @@ PrefabInstance:
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CustomUIController, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746402361323, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
     - target: {fileID: 925088746538159843, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -11165,6 +12441,10 @@ PrefabInstance:
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CustomUIController, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746538159853, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
     - target: {fileID: 925088746586174720, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 
@@ -11181,6 +12461,14 @@ PrefabInstance:
       propertyPath: InteractableStateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CustomUIController, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 925088746586174722, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
+    - target: {fileID: 925088747194982241, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77cb6ef7b9c1844489020a1c515debca, type: 2}
     - target: {fileID: 925088747194982247, guid: a18de71d0e25d064abbacf3c4c787781, type: 3}
       propertyPath: _buttonPlaneCenter
       value: 

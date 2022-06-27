@@ -3,7 +3,7 @@
 Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.  
 
 See SampleFramework license.txt for license terms.  Unless required by applicable law 
-or agreed to in writing, the sample code is provided ‚ÄúAS IS‚Äù WITHOUT WARRANTIES OR 
+or agreed to in writing, the sample code is provided ìAS ISî WITHOUT WARRANTIES OR 
 CONDITIONS OF ANY KIND, either express or implied.  See the license for specific 
 language governing permissions and limitations under the license.
 
@@ -18,7 +18,7 @@ namespace OculusSampleFramework
 	/// <summary>
 	/// A button interactable used by the train scene.
 	/// </summary>
-	public class ButtonController : Interactable
+	public class PianoButtonController : Interactable
 	{
 		private const float ENTRY_DOT_THRESHOLD = 0.8f;
 		private const float PERP_DOT_THRESHOLD = 0.5f;
@@ -42,6 +42,15 @@ namespace OculusSampleFramework
 
 		[SerializeField]
 		private bool _allowMultipleNearFieldInteraction = false;
+
+		// will assign tag in awake
+		private int objectTag;
+
+		// data will be sent to data manager and then passed into custom piano controller
+		public void SendPianoKeyDataToManager()
+		{
+			DataManager.Instance.keyCounter = System.Convert.ToInt32(gameObject.tag);
+		}
 
 		public override int ValidToolTagsMask
 		{
@@ -83,6 +92,9 @@ namespace OculusSampleFramework
 			_proximityZoneCollider = _proximityZone.GetComponent<ColliderZone>();
 			_contactZoneCollider = _contactZone.GetComponent<ColliderZone>();
 			_actionZoneCollider = _actionZone.GetComponent<ColliderZone>();
+
+			objectTag = System.Convert.ToInt32(gameObject.tag);
+			Debug.Log(objectTag);
 		}
 
 		private void FireInteractionEventsOnDepth(InteractableCollisionDepth oldDepth,
