@@ -17,7 +17,6 @@ public static class PhoneVibration
         if (IsAndroid())
         {
             Handheld.Vibrate();
-            //phoneVibrator.Call("vibrate", ms);
         }
         else
         {
