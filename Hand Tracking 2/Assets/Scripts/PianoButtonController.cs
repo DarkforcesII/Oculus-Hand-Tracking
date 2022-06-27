@@ -49,7 +49,7 @@ namespace OculusSampleFramework
 		// data will be sent to data manager and then passed into custom piano controller
 		public void SendPianoKeyDataToManager()
 		{
-			DataManager.Instance.keyCounter = System.Convert.ToInt32(gameObject.tag);
+			DataManager.Instance.keyCounter = objectTag;
 		}
 
 		public override int ValidToolTagsMask
@@ -94,7 +94,6 @@ namespace OculusSampleFramework
 			_actionZoneCollider = _actionZone.GetComponent<ColliderZone>();
 
 			objectTag = System.Convert.ToInt32(gameObject.tag);
-			Debug.Log(objectTag);
 		}
 
 		private void FireInteractionEventsOnDepth(InteractableCollisionDepth oldDepth,
